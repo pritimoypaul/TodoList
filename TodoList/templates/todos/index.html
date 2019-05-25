@@ -1,0 +1,16 @@
+{% extends "todos/base.html" %} {% block content %}
+<div class="overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">
+      Welcome to Todos List App
+    </h1>
+    <p class="lead font-weight-normal">
+      And an even wittier subheading to boot. Jumpstart your marketing efforts
+      with this example based on Apple’s marketing pages.
+    </p>
+    <a class="btn btn-outline-secondary" href="{% url 'todos' %}"
+      >Go to ToDos</a
+    >
+  </div>
+</div>
+{% endblock content %}

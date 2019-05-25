@@ -1,0 +1,36 @@
+{% extends "todos/base.html" %} {% block content %}
+    <div class="overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="container">
+        <form method="POST">
+    {% csrf_token %}
+    <div><h3>Edit Todo</h3></div>
+    <hr />
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Todo:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="todoName"
+        name="todoName"
+        placeholder="type todo name"
+        value="{{ todo_for_edit.todoName }}"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Todo Description:</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        rows="3"
+      >{{ todo_for_edit.description }}</textarea>
+    </div>
+
+    <div class="form-group">
+      <input class="btn btn-primary" type="submit" value="Update" />
+    </div>
+  </form>
+    </div>
+    </div>
+{% endblock content %}
